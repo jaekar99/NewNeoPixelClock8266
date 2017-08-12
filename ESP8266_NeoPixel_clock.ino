@@ -7,7 +7,7 @@
 #include <Adafruit_NeoPixel.h>
 
 #define NUMPIXELS      60       // number of NeoPixel LEDs
-#define PIN            2        // digital pin on ESP8266 for the NeoPixel data line
+#define PIN            D2        // digital pin on ESP8266 for the NeoPixel data line
 #define mirror_hands   true     // In case the NeoPixel ring is wired ant-clockwise. 
 
 byte hour_hand, minute_hand, second_hand, previous_second;
@@ -39,7 +39,7 @@ void drawHands(){
   pixels.show();
 
   // just a debug string, can be removed
-  Serial.printf("hour:%d (%d), minute:%d second:%d (%d) \n",hour(),hour_hand,minute_hand,true_second,second_hand);
+ // Serial.printf("hour:%d (%d), minute:%d second:%d (%d) \n",hour(),hour_hand,minute_hand,true_second,second_hand);
 }
 
 void setup() {
